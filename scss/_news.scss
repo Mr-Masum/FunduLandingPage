@@ -1,0 +1,45 @@
+.news_area {
+    @media #{$xs}{
+        padding: 90px 0 60px 0;
+    }
+    & .back_title {
+        @include back_background(#eee, #eee);
+    }
+}
+
+.feed {
+    background: $white-color;
+    & img{
+        @media #{$xs}{
+            width: 100%;
+        }
+    }
+    &__content {
+        padding: 40px 40px 25px 40px;
+     
+        & .feed_date {
+            color: $theme-color;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        & h4 {
+            font-size: 18px;
+            margin: 20px 0;
+            @media #{$md}{
+                font-size: 16px;
+            }
+        }
+        & p {
+            font-size: 14px;
+            @media #{$md}{
+                font-size: 13px;
+            }
+        }
+        & .feed_arrow {
+            & i {
+                color: $theme-color;
+            }
+        }
+    }
+}

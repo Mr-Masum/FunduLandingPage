@@ -1,0 +1,74 @@
+.sermons_area{
+    padding: 90px 0 60px 0;
+    & .fsermons {
+        &__img {
+            position: relative;
+            & img{
+                @media #{$xs}{
+                    width: 100%;
+                }
+            }
+            &-icons {
+                position: absolute;
+                left: 50%;
+                bottom: -35px;
+                border: 2px solid $sermon-color;
+                border-radius: 50px;
+                padding: 20px 45px;
+                margin: 0 45px;
+                width: 75%;
+                margin-left: -37.5%;
+                background: $white-color;
+                text-align: center;
+                @media #{$lg}{
+                    padding: 20px 31px;
+                }
+                @media #{$md}{
+                    padding: 20px 31px;
+                }
+                @media #{$xs}{
+                    padding: 20px 42px;
+                }
+                @include transition(0.5s);
+                & a {
+                    padding: 0 12px;
+                    font-size: 14px;
+                    display: inline-block;
+                    color: $sermon-color;
+                    @media #{$lg}{
+                        padding: 0 10px;
+                    }
+                    @media #{$sm}{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        &__content {
+            border: 2px solid $sermon-color;
+            border-top: 0;
+            padding: 30px 40px;
+            position: relative;
+            padding-top: 60px;
+            @include transition(0.5s);
+            & h4 {
+                font-size: 22px;
+                margin-bottom: 15px;
+                @media #{$lg}{
+                    font-size: 17px;
+                }
+                @media #{$md}{
+                    font-size: 20px;
+                }
+            }
+            & p {
+                font-size: 14px;
+            }
+            &-author {
+                span {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

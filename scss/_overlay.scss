@@ -1,0 +1,100 @@
+/*
+Overlay
+***************************************************/
+
+[data-overlay] {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+    }
+}
+
+
+/*
+Overlay color
+***************************************************/
+
+[data-overlay="light"] {
+    &::before {
+        background-color: $white-color;
+    }
+}
+
+[data-overlay="dark"] {
+    &::before {
+        background-color: $heading-color;
+    }
+}
+
+[data-overlay="theme"] {
+    &::before {
+        background-color: $theme-color;
+    }
+}
+
+
+/*
+Overlay opacity
+***************************************************/
+
+[data-opcity="9"] {
+    &::before {
+        opacity: 0.9;
+    }
+}
+
+[data-opcity="8"] {
+    &::before {
+        opacity: 0.8;
+    }
+}
+
+[data-opcity="7"] {
+    &::before {
+        opacity: 0.7;
+    }
+}
+
+[data-opcity="6"] {
+    &::before {
+        opacity: 0.6;
+    }
+}
+
+[data-opcity="5"] {
+    &::before {
+        opacity: 0.5;
+    }
+}
+
+[data-opcity="4"] {
+    &::before {
+        opacity: 0.4;
+    }
+}
+
+[data-opcity="3"] {
+    &::before {
+        opacity: 0.3;
+    }
+}
+
+[data-opcity="2"] {
+    &::before {
+        opacity: 0.2;
+    }
+}
+
+[data-opcity="1"] {
+    &::before {
+        opacity: 0.1;
+    }
+}

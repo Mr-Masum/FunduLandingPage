@@ -1,0 +1,125 @@
+.single_slide {
+    position: relative;
+    min-height: 1020px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    @media #{$xl} {
+        min-height: 830px;
+    }
+    @media #{$lg} {
+        min-height: 725px;
+    }
+    @media #{$md} {
+        min-height: 630px;
+        padding-top: 250px;
+    }
+    @media #{$xs} {
+        min-height: 550px;
+        padding-top: 350px;
+        padding-bottom: 60px;
+    }
+    & .single_slide__content {
+        @media #{$xs}{
+            text-align: center;
+        }
+        & span.slide_mission {
+            text-transform: capitalize;
+            color: $theme-color;
+            margin-bottom: 10px;
+            & i {
+                margin-right: 10px;
+            }
+        }
+        & h2 {
+            font-size: 74px;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            margin-top: 10px;
+            @media #{$lg}{
+                font-size: 60px;
+            }
+            @media #{$md}{
+                font-size: 45px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+            @media #{$sm}{
+                font-size: 55px;
+            }
+        }
+        & .slide_btn{
+            @media #{$xs}{
+                margin: 0 15px;
+            }
+            & .f_btn{
+                @media #{$xs}{
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                    display: block;
+                }
+                @media #{$sm}{
+                    margin-right: 25px;
+                    display: inline-block;
+                }
+            }
+        }
+        & .transparent_btn {
+            background: transparent;
+            border-color: $btn-border-color;
+            color: $heading-color;
+            &:hover {
+                border-color: $theme-color;
+                background: transparent;
+                color: $theme-color;
+            }
+        }
+    }
+    & .slide_img {
+        img {
+            max-width: inherit;
+            @media #{$xl}{
+                max-width: 100%;
+            }
+            @media #{$lg}{
+                max-width: 100%;
+            }
+            @media #{$md}{
+                max-width: 100%;
+            }
+            @media #{$xs}{
+                max-width: 100%;
+            }
+
+        }
+    }
+    & .absolut_direction {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        @media #{$md}{
+            left: 56%;
+            bottom: 20px;
+        }
+        & .arrow_down i {
+            font-size: 40px;
+            color: $theme-color;
+            @media #{$md}{
+                font-size: 25px;
+            }
+        }
+    }
+    &:after {
+        @include absolute-value;
+        background: $white-color;
+        opacity: 0.94;
+    }
+}
+
+.single_slide * {
+    position: relative;
+    z-index: 1;
+}
